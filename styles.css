@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    counter-reset: count;
+}
+
+.error {
+    color: red;
+}
+
+.counter::before {
+    counter-increment: count;
+    content: "" counter(count) "";
+}
+
+.alertify .ajs-dialog {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+}
