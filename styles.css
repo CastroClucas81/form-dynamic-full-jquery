@@ -1,22 +1,223 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap);
+
+:root {
+  --purple: #863786;
+  --white: #fff;
+  --gray: #f4f4f4;
+  --gold: #fdbf33;
+  --text: #646464;
+  --red: #dd0000;
+  --blue: #374c86;
+  --green: #47c95a;
+}
+
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    counter-reset: count;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  counter-reset: count;
+  background-color: var(--gray);
+  font-family: "Roboto", sans-serif;
 }
 
 .error {
-    color: red;
+  color: red;
+}
+
+/* buttons */
+.button-default {
+  background-color: var(--purple);
+  color: var(--white);
+  font-family: "Roboto Slab", sans-serif;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.3s all ease;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.button-default:hover,
+.button-default:active {
+  background-color: #6a2b6a;
+}
+
+.create-button-default {
+  background-color: var(--gold);
+  border: 1px solid var(--gold);
+  outline: none;
+  padding: 10px 20px;
+  font-family: "Roboto Slab";
+  color: var(--purple);
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.button-danger-default {
+  background-color: var(--red);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-family: "Roboto Slab";
+  border-radius: 4px;
+  font-weight: bold;
+  color: var(--white);
+  margin-right: 5px;
+}
+
+.deleteRow {
+  border: none;
+  background-color: var(--red);
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.editRow {
+  border: none;
+  background-color: var(--blue);
+  font-family: "Roboto Slab", sans-serif;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* input search */
+.input-search {
+  border: 1px solid var(--text);
+  display: inline-block;
+  border-radius: 5px;
+  padding-left: 8px;
+  margin: 10px auto;
+}
+
+.input-search i {
+  color: var(--purple);
+}
+
+.input-search input {
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--purple);
+  outline: none;
+  padding: 10px 20px 10px 5px;
+}
+
+.input-search input::placeholder {
+  color: var(--purple);
 }
 
 .counter::before {
-    counter-increment: count;
-    content: "" counter(count) "";
+  counter-increment: count;
+  content: "" counter(count) "";
 }
 
-.alertify .ajs-dialog {
-    top: 50%;
-    transform: translateY(-50%);
-    margin: auto;
+.edit-input {
+  border-radius: 4px;
+  border: 1px solid var(--purple);
+  color: var(--purple);
+  width: 120px;
+  outline: none;
+  padding: 5px;
+}
+
+/* card */
+.card-default {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+.card-header-default {
+  display: flex;
+  align-items: center;
+}
+
+.card-body-default h3 {
+  color: var(--blue);
+  font-family: "Roboto Slab", sans-serif;
+  margin: 10px auto 10px auto;
+  text-align: center;
+}
+
+.counterRowsTable {
+  color: var(--text);
+  font-family: "Roboto Slab", sans-serif;
+}
+
+table thead {
+  color: var(--text);
+}
+
+table tbody td {
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.modal-content {
+  background-clip: initial;
+  border-radius: 7px;
+}
+
+.modal-content .modal-title {
+  font-family: "Roboto Slab", sans-serif;
+  color: var(--purple);
+  font-weight: bold;
+}
+
+.form-control-default {
+  width: 100%;
+  padding: 5px 10px;
+  columns: var(--text);
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--purple);
+  color: var(--purple);
+}
+
+/* alertify */
+.alertify .ajs-body .ajs-content {
+  padding: 16px 24px 16px 0px;
+}
+
+.alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button {
+  margin-right: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 10px 20px;
+}
+
+.alertify .ajs-footer .ajs-buttons.ajs-primary .ajs-button.ajs-cancel {
+  color: var(--blue);
+}
+
+.alertify .ajs-header {
+  color: var(--purple);
+  font-weight: bold;
+  background-color: var(--white);
+  border: none;
+}
+
+.alertify-notifier .ajs-message.ajs-success {
+  background-color: var(--green);
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.alertify-notifier .ajs-message.ajs-error {
+  background-color: var(--red);
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "Roboto Slab", sans-serif;
+  color: var(--white);
 }
